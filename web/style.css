@@ -29,6 +29,10 @@ ul {
     padding: 5px;
 }
 
+a {
+    color: gold;
+}
+
 li {
     padding-left: 15px;
     font-size: 16px;
