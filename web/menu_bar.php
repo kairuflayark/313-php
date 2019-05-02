@@ -2,17 +2,17 @@
 
 <?php
     
-    if ( $_SERVER['PHP_SELF' ] == '\home.php'){
+    if ( $_SERVER['PHP_SELF' ] == "\home.php"){
         echo "<ul><li class=\"current\"><a href=\"home.php\" >Home</a></li>";
     } else {
         echo "<ul><li><a href=\"home.php\">Home</a></li>";
     }
-    if ( $_SERVER['PHP_SELF' ] == '\about-us.php') {
+    if ( $_SERVER['PHP_SELF' ] == "\about-us.php") {
         echo "<li class=\"current\"><a href=\"about-us.php\" >About Us</a></li>";
     } else {   
         echo "<li><a href=\"about-us.php\">About Us</a></li>";
     }
-    if ( $_SERVER['PHP_SELF' ] == '\login.php') {
+    if ( $_SERVER['PHP_SELF' ] == "\login.php") {
         echo "<li class=\"current\"><a href=\"login.php\">Login</a></li>";
     } else {
        echo "<li><a href=\"login.php\" class=>Login</a></li>";

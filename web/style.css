@@ -24,7 +24,6 @@ button {
 ul {
     display: flex;
     flex-direction: row;
-    background-color: black;
     color: gold;
     padding: 20px;
 }
