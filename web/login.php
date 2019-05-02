@@ -5,8 +5,9 @@
 <body>
 
 <?php include('menu_bar.php') ?>
-<button value="Log in as Administrator"></button>
-<button name="Log in as Tester"></button>
+<button name="Administrator">Login as Administrator</button>
+<br>
+<button name="Tester">Login as tester</button>
 
 </body>
 </html>
