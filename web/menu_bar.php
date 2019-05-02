@@ -15,6 +15,6 @@
         echo "<li><a href=\"login.php\" class=\"current\">Login</a></li>";
     }
     echo "</ul>";
-     $_SERVER['PHP_SELF'];
+    echo $_SERVER['PHP_SELF'];
     
     ?>
