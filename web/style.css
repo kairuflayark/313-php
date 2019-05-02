@@ -1,0 +1,22 @@
+body {
+    background-color: aqua;
+}
+
+h1 {
+    text-align: center;
+}
+
+.one {
+    margin: auto;
+    width: 75%;
+    background-color: oldlace;
+    padding: 7px;
+
+}
+button {
+    text-align: center;
+}
+
+.current {
+    background-color: red;
+}
