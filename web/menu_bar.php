@@ -12,10 +12,10 @@
     } else {   
         echo "<li><a href=\"about-us.php\">About Us</a></li>";
     }
-    if ( $file === 'login.php') {
+    if ( $file === 'login') {
         echo "<li class=\"current\"><a href=\"login.php\">Login</a></li>";
     } else {
-    <li><a href="login.php" class=>Login</a></li>";
+    "<li><a href="login.php" class=>Login</a></li>";
     }
     echo "</ul>";
     echo $file;
