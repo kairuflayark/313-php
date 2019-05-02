@@ -18,5 +18,12 @@ button {
 }
 
 .current {
-    background-color: red;
+    background-color: blue;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    color: gold;
 }
