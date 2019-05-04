@@ -14,6 +14,7 @@
 	<div class="jumbotron text-center">
 		<h1>James Call's Assignments</h1>
 	</div>
+	<?php include('nav_bar.php'); ?>
 	<h1> Coming Soon...</h1>
 
 </body>
