@@ -1,5 +1,10 @@
+body {
+    background-color: teal;
+}
+
 .container { 
     margin-top: 30px
+    background-color: oldlace;
  }
  a:hover {
     color: black;
@@ -7,4 +12,7 @@
  li:hover {
     background-color: gold;
     color: black;
+ }
+ img {
+    max-width: 100%;
  }
