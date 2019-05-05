@@ -6,11 +6,10 @@
     		<div class="navbar-header <?php if ($page === 'home_page') {echo 'active';}?>">
       			<a class="navbar-brand" href="home_page.php">Home</a>
     		</div>
-		    <ul class="nav navbar-nav">
-		      <li <?php if ($page === 'assignments') {
-		      	echo 'class="active"';} ?>><a href="assignments.php">Assignments</a></li>
+		    	<ul class="nav navbar-nav">
+		      		<li <?php if ($page === 'assignments') {
+		      		echo 'class="active"';} ?>>
+		      			<a href="assignments.php">Assignments</a></li>
 		    </ul>
-	  </div>
-</nav>
+	  	</div>
 	</nav>
-	<?php echo $page; ?>

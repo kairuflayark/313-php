@@ -2,8 +2,9 @@
     margin-top: 30px
  }
  a:hover {
-    color: gold;
+    color: black;
  }
  li:hover {
     background-color: gold;
+    color: black;
  }
