@@ -4,3 +4,6 @@
  a:hover {
     color: gold;
  }
+ li:hover {
+    background-color: gold;
+ }
