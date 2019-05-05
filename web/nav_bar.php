@@ -7,9 +7,8 @@
       			<a class="navbar-brand" href="home_page.php">Home</a>
     		</div>
 		    <ul class="nav navbar-nav">
-
 		      <li <?php if ($page === 'assignments') {
-		      	echo 'class="active"';} ?>><a href="Assignments.php">Assignments</a></li>
+		      	echo 'class="active"';} ?>><a href="assignments.php">Assignments</a></li>
 		    </ul>
 	  </div>
 </nav>
