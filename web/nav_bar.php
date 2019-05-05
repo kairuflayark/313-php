@@ -12,4 +12,6 @@
 					<a class="nav-link" href="assignments.php"> assignments</a>
 				</li>
 			</ul>
+		</div>
 	</nav>
+	<?php echo $page; ?>
