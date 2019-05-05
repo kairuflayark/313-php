@@ -10,4 +10,6 @@
 			<ul class="navbar_nav">
 				<li class="nav-item <?php if ($page === 'assignments') {echo 'active';} ?>">
 					<a class="nav-link" href="assignments.php"> assignments</a>
+				</li>
+			</ul>
 	</nav>
