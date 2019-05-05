@@ -23,6 +23,7 @@
 			<div class="col-sm-4">
 				<h2>About Me</h2>
 				<img src="self_photo.jpg" alt="a picture of me at SLC FanX 	2017" style="max-width: 100%">
+				<p>Not much to say, I read, I write, and I code these days.  Not much time for anything else.</p>
 			</div>
 			<div class="col-sm-8">
 				<h2>The Only True Story of Sheek the Liar</h2>
