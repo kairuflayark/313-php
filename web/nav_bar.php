@@ -1,7 +1,7 @@
 <?php
 	$page = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);?>
 
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-inverse">
   		<div class="container-fluid">
     		<div class="navbar-header">
       			<a class="navbar-brand" href="home_page.php">Home</a>
