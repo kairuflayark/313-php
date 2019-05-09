@@ -13,7 +13,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-4">
-				<p>sidebar</p>
+				<p>sidebar <br> Find your stuff here</p>
 			</div>
 			<div class="col-8">
 				<img src="Binastone.jpg" class="float-left">
