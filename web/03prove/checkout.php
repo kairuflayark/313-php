@@ -9,15 +9,6 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<div class="container">
-
-	<div>
-		<img src="Binastone.jpg" class="float-left">
-		<h3>Binastone Blender</h3>
-		<p> Budget Blender for the Budget Masses.</p>
-	</div>
-
-	</div>
-
+	
 </body>
 </html>
