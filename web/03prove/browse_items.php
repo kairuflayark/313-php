@@ -10,6 +10,9 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+	<div class="jumbotron text-center">
+		<h1> Blender Heaven </h1>
+	</div>
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-4">
