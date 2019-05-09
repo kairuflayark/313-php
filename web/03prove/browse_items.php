@@ -10,8 +10,10 @@
 </head>
 <body>
 	<div class="container">
-
-		<div>
+		<div class="col-sm-4">
+			<p>sidebar</p>
+		</div>
+		<div class="col-8">
 			<img src="Binastone.jpg" class="float-left">
 			<h3>Binastone Blender</h3>
 			<p> Budget Blender for the Budget Masses.</p>
