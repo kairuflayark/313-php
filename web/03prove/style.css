@@ -5,3 +5,6 @@ img {
 .container {
     margin-top: 15px;
 }
+.item {
+    height: 400px;
+}
