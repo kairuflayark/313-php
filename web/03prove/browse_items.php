@@ -18,7 +18,7 @@
 			<div class="col-sm-4">
 				<p>sidebar <br> Find your stuff here</p>
 			</div>
-			<div class="col-sm-8">
+			<div class="col-sm-8 item">
 				<img src="Binastone.jpg" class="float-left">
 				<h3>Binastone Blender</h3>
 				<p> Budget Blender for the Budget Masses.</p>
