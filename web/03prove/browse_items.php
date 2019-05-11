@@ -36,7 +36,7 @@
 				}
 				?>
 					<div class='item'>
-						<button type="submit"></button>
+						<button type="submit">Submit Order</button>
 					</div>
 				</div>
 			</form>

@@ -8,4 +8,5 @@ img {
 }
 .item {
     text-align: right;
+    border: solid black 3px;
 }
