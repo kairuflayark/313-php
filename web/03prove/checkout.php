@@ -21,20 +21,20 @@
 			</div>
 			<form>
 				<div class='col-sm-4'>
-					<form action="/confirmation.php" method="post">
+					<form action="/confirmation.php" method="get">
 					<label>First Name:</label>
-					<input type="text" name="fName" id="fName" onchange= update_session_value(this.id, this.value)><br>
+					<input type="text" name="fName"><br>
 					<label>Last Name:</label>
-					<input type="text" name='lName' id="lName" onchange= update_session_value(this.id, this.value)><br>
+					<input type="text" name='lName'><br>
 					<label>Street Address:</label>
-					<input type="text" name='street' id="street" onchange= update_session_value(this.id, this.value)><br>
+					<input type="text" name='street'><br>
 					<label>City:</label>
-					<input type="text" name="city" id="city" onchange= update_session_value(this.id, this.value)><br>
+					<input type="text" name="city"><br>
 					<label>State:</label>
-					<input type="text" name='state' maxlength="2" id="state" onchange= update_session_value(this.id, this.value)><br>
+					<input type="text" name='state' maxlength="2"><br>
 					<label>Zip Code:</label>
-					<input type="text" name='zCode' id="zCode" onchange= update_session_value(this.id, this.value)><br>
-					<a href="confirmation.php"><button type="button">Finalize your Order</button>
+					<input type="text" name='zCode'><br>
+					<button type="submit" name="submit">Finalize your Order</button>
 					</form>
 					<a href="view_cart.php"><button type="button">Return to Cart</button></a>
 </body>

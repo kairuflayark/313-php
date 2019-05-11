@@ -32,9 +32,9 @@ function test_input($data) {
 			<p>
 			<?php
 				print_r($_SESSION);
-				echo test_input($_POST["fName"]) . " " . test_input($_POST["lName"]) . "<br>";
-				echo test_input($_POST["address"]) . "<br>";
-				echo test_input($_POST["city"]) . ", " . test_input($_POST["state"]) . " " . test_input($_POST["zCode"]);
+				echo test_input($_GET["fName"]) . " " . test_input($_GET["lName"]) . "<br>";
+				echo test_input($_GET["address"]) . "<br>";
+				echo test_input($_GET["city"]) . ", " . test_input($_GET["state"]) . " " . test_input($_GET["zCode"]);
 			?>
 
 			<h2> Items to be shipped</h2>
