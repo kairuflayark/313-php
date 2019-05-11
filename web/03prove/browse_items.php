@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +10,7 @@
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src=script.js></script>
 </head>
 <body>
 	<div class="jumbotron text-center">
@@ -22,11 +25,12 @@
 				<div class='col-sm-6'>
 				<?php 
 				$blenders = array("Binastone", "Ninja", "Electrolux", "Philips");
-				foreach ($blenders as $value){
+				$_SESSION['Blenders'] = $blenders;
+				foreach ($_SESSION['Blenders'] as $value){
 					echo "<div class='item row'>";
 					echo "<div><img src='$value.jpg' class='img-fluid float-left'></div>";
 					echo	"<div><h3$value Blender</h3>";
-					echo "<label>Quantity</label><select name='$value'>";
+					echo "<label>Quantity</label><select name='$value' id='$value' onchange= 'update_session_value(this.id, this.value)'>";
 					echo	"<option value='0'>0</option>";
 					echo	"<option value='1'>1</option>";
 					echo	"<option value='2'>2</option>";
