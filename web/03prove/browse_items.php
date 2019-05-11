@@ -21,7 +21,7 @@
 			<div class="col-sm-4">
 				<p>sidebar <br> Find your stuff here</p>
 			</div>
-			<form action="checkout.php" method="get">
+			<form>
 				<div class='col-sm-6'>
 				<?php 
 				$blenders = array("Binastone", "Ninja", "Electrolux", "Philips");
@@ -29,7 +29,7 @@
 				foreach ($_SESSION['Blenders'] as $value){
 					echo "<div class='item row'>";
 					echo "<div><img src='$value.jpg' class='img-fluid float-left'></div>";
-					echo	"<div><h3$value Blender</h3>";
+					echo	"<div><h3>$value Blender</h3>";
 					echo "<label>Quantity</label><select name='$value' id='$value' onchange= 'update_session_value(this.id, this.value)'>";
 					echo	"<option value='0'>0</option>";
 					echo	"<option value='1'>1</option>";
@@ -40,7 +40,7 @@
 				}
 				?>
 					<div class='item'>
-						<button type="submit">Submit Order</button>
+						<a href="view_cart.php">View Cart</a>
 					</div>
 				</div>
 			</form>
