@@ -26,7 +26,7 @@
 				<?php 
 				$blenders = array("Binastone", "Ninja", "Electrolux", "Philips");
 				//$_SESSION['Blenders'] = $blenders;
-				foreach ($_SESSION['Blenders'] as $value){
+				foreach ($Blenders as $value){
 					echo "<div class='item row'>";
 					echo "<div><img src='$value.jpg' class='img-fluid float-left'></div>";
 					echo	"<div><h3>$value Blender</h3>";
