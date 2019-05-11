@@ -37,9 +37,9 @@
 				foreach ($_SESSION['blenders'] as $value){
 					if ($_SESSION["$value"] == true){
 					echo 	"<div class='item row'>";
-					echo 	"<button type='button'><img src='$value.jpg' class='img-fluid float-left'>";
+					echo 	"<a  href='view_cart.php?$value=false'><button type='button'><img src='$value.jpg' class='img-fluid float-left'>";
 					echo	"<h3>$value Blender</h3>";
-					echo	"<a  href='view_cart.php?$value=false'>Remove from Cart</a></button>";
+					echo	"Remove from Cart</button></a>";
 					echo 	"</div>";
 					}
 				}

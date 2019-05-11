@@ -35,9 +35,9 @@
 				<?php 				
 				foreach ($_SESSION['blenders'] as $value){
 					echo "<div class='item row'>";
-					echo "<button type='button'><img src='$value.jpg' class='img-fluid float-left'>";
+					echo "<a  href='browse_items.php?$value=true'><button type='button'><img src='$value.jpg' class='img-fluid float-left'>";
 					echo	"<h3>$value Blender</h3>";
-					echo	"<a  href='browse_items.php?$value=true'>Add To Cart</a></button>";
+					echo	"Add To Cart</button></a>";
 					//echo "<label>Quantity</label><select name='$value' id='$value' onchange= 'update_session_value(this.id, this.value)'>";
 					//echo	"<option value='0'>0</option>";
 					//echo	"<option value='1'>1</option>";
