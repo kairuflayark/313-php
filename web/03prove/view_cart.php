@@ -21,6 +21,7 @@
 
 			}
 		}
+		
 	?>
 	<div class="jumbotron text-center">
 		<h1> Blender Heaven </h1>
@@ -31,16 +32,22 @@
 				<h1>View Your Cart</h1>
 			</div>
 			<div class='col-sm-4'>
-				<?php 				
+
+			<?php		
 				foreach ($_SESSION['blenders'] as $value){
 					if ($_SESSION["$value"] == true){
-					echo "<div class='item row'>";
-					echo "<button type='button'><img src='$value.jpg' class='img-fluid float-left'>";
+					echo 	"<div class='item row'>";
+					echo 	"<button type='button'><img src='$value.jpg' class='img-fluid float-left'>";
 					echo	"<h3>$value Blender</h3>";
 					echo	"<a  href='view_cart.php?$value=false'>Remove from Cart</a></button>";
-					echo "</div>";
+					echo 	"</div>";
 					}
+				}
+					
 				?>
+
+
+
 				<div class='item'>
 					<button type="button" href="browse_items.php">Return to Shopping</button>
 					<button type="button" hred="checkout.php">Continue to Checkout</button>
@@ -50,5 +57,5 @@
 			
 		</div>
 	</div>
-</body>
+	</body>
 </html>
