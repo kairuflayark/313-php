@@ -3,7 +3,6 @@ function update_session_value(id, value) {
             type: "POST",
             url: 'session.php', // change url as your 
             data: id + value,
-            dataType: 'json',
             success: function (data) {
 
             }
