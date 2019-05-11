@@ -11,12 +11,12 @@
 </head>
 <body>
 <?php
-		function test_input($data) {
-				$data = trim($data);
-				$data = stripslashes($data);
-				$data = htmlspecialchars($data);
-				return $data;
-		}
+function test_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+		return $data;
+}
 	?>
 
 <div class="jumbotron text-center">
@@ -31,16 +31,11 @@
 			<h2>Shipped To</h2>
 			<p>
 			<?php
-			foreach ($_SESSION['blenders'] as $value){
-					if ($_SESSION["$value"] == true){
-					echo 	"<div class='item row'>";
-					echo 	"<a  href='view_cart.php?$value=false'><button type='button'><img src='$value.jpg' class='img-fluid float-left'>";
-					echo	"<h3>$value Blender</h3>";
-					echo	"Remove from Cart</button></a>";
-					echo 	"</div>";
-					}
-				}
-					?>
+				echo test_input($_POST["fName"]) . " " . test_input($_POST["lName"]) . "<br>";
+				echo test_input($_POST["address"]) . "<br>";
+				echo test_input($_POST["city"]) . ", " . test_input($_POST["state"]) . " " . test_input($_POST["zCode"]);
+			?>
+
 			<h2> Items to be shipped</h2>
 			<?php
 				foreach ($_SESSION['blenders'] as $value){
