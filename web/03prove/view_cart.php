@@ -49,8 +49,8 @@
 
 
 				<div class='item'>
-					<button type="button" href="browse_items.php">Return to Shopping</button>
-					<button type="button" hred="checkout.php">Continue to Checkout</button>
+					<a  href="browse_items.php"><button type="button">Return to Shopping</button></a>
+					<a hred="checkout.php"><button type="button" >Continue to Checkout</button></a>
 				</div>
 					
 			</div>
