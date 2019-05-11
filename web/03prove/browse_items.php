@@ -19,7 +19,7 @@
 				<p>sidebar <br> Find your stuff here</p>
 			</div>
 			<form action="checkout.php" method="get">
-				<div class='col-sm-8'>
+				<div class='col-sm-6'>
 				<?php 
 				$blenders = array("Binastone", "Ninja", "Electrolux", "Philips");
 				foreach ($blenders as $value){
