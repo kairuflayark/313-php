@@ -31,10 +31,8 @@
 				<p>sidebar <br> Find your stuff here</p>
 			</div>
 			<form>
-				<div class='col-sm-6'>
-				<?php 
-				
-				
+				<div class='col-sm-4'>
+				<?php 				
 				foreach ($_SESSION['blenders'] as $value){
 					echo "<div class='item row'>";
 					echo "<button type='button'><img src='$value.jpg' class='img-fluid float-left'>";
