@@ -37,9 +37,9 @@
 				
 				foreach ($_SESSION['blenders'] as $value){
 					echo "<div class='item row'>";
-					echo "<div><img src='$value.jpg' class='img-fluid float-left'></div>";
+					echo "<button type='button'><img src='$value.jpg' class='img-fluid float-left'></div>";
 					echo	"<div><h3>$value Blender</h3>";
-					echo	"<button type='button'><a  href='browse_items.php?$value=true'>Add To Cart</a></button>";
+					echo	"<a  href='browse_items.php?$value=true'>Add To Cart</a></button>";
 					//echo "<label>Quantity</label><select name='$value' id='$value' onchange= 'update_session_value(this.id, this.value)'>";
 					//echo	"<option value='0'>0</option>";
 					//echo	"<option value='1'>1</option>";
