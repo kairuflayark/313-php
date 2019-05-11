@@ -45,7 +45,8 @@
 					//echo	"<option value='2'>2</option>";
 					//echo	"<option value='3'>3</option>";
 					//echo	"<option value='4'>4</option>";
-					//echo	"<option value='5'>5</option></select></div></div>";
+					//echo	"<option value='5'>5</option></select>"
+					echo "</div></div>";
 				}
 				?>
 					<div class='item'>
