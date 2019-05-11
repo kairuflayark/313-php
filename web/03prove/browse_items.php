@@ -23,9 +23,9 @@
 				<?php 
 				$blenders = array("Binastone", "Ninja", "Electrolux", "Philips");
 				foreach ($blenders as $value){
-					echo "<div class='item'>";
-					echo "<div class='col-sm-3'><img src='$value.jpg' class='img-fluid float-left'></div>";
-					echo	"<div class='col-sm-3'><h3$value Blender</h3>";
+					echo "<div class='item row'>";
+					echo "<div><img src='$value.jpg' class='img-fluid float-left'></div>";
+					echo	"<div><h3$value Blender</h3>";
 					echo "<label>Quantity</label><select name='$value'>";
 					echo	"<option value='0'>0</option>";
 					echo	"<option value='1'>1</option>";
