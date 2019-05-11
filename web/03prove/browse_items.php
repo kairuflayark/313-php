@@ -24,7 +24,7 @@
 				$blenders = array("Binastone", "Ninja", "Electrolux", "Philips");
 				foreach ($blenders as $value){
 					echo "<div class='item'>";
-					echo "<img src='$value.jpg' class='float-left'>";
+					echo "<img src='$value.jpg' class='img-fluid float-left'>";
 					echo	"<h3>$value Blender</h3>";
 					echo "<label>Quantity</label><select name='$value'>";
 					echo	"<option value='0'>0</option>";

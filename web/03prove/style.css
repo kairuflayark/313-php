@@ -1,8 +1,7 @@
 img {
     width: 200px;
     max-width: 100%;
-    align-self: left;
-    float: left;
+    text-align: left;
 }
 .container {
     margin-top: 15px;
