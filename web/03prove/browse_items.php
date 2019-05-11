@@ -26,7 +26,7 @@
 					echo "<div class='item'>";
 					echo "<img src='$value.jpg' class='float-left'>";
 					echo	"<h3>$value Blender</h3>";
-					echo "<select name='$value'>";
+					echo "<label>Quantity</label><select name='$value'>";
 					echo	"<option value='0'>0</option>";
 					echo	"<option value='1'>1</option>";
 					echo	"<option value='2'>2</option>";
