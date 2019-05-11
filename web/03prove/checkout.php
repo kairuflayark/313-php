@@ -21,7 +21,7 @@
 			</div>
 			<form>
 				<div class='col-sm-4'>
-					<form action="confirmation.php" method="post">
+					<form action="/confirmation.php" method="post">
 					<label>First Name:</label>
 					<input type="text" name="fName"><br>
 					<label>Last Name:</label>
@@ -31,7 +31,7 @@
 					<label>City:</label>
 					<input type="text" name="city"><br>
 					<label>State:</label>
-					<input type="text" name='state' maxlength="2">
+					<input type="text" name='state' maxlength="2"><br>
 					<label>Zip Code:</label>
 					<input type="text" name='zCode'><br>
 					<button type="submit">Finalize your Order</button>
