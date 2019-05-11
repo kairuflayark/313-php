@@ -19,21 +19,26 @@
 				<p>sidebar <br> Find your stuff here</p>
 			</div>
 			<form action="checkout.php" method="get">
-			<?php 
-			$blenders = array("Binastone", "Ninja", "Electrolux", "Philips");
-			foreach ($blenders as $value){
-				echo "<div class='col-sm-8 item'>";
-				echo "<img src='$value.jpg' class='float-left'>";
-				echo	"<h3>$value Blender</h3>";
-				echo "<select name='$value'>";
-				echo	"<option value='0'>0</option>";
-				echo	"<option value='1'>1</option>";
-				echo	"<option value='2'>2</option>";
-				echo	"<option value='3'>3</option>";
-				echo	"<option value='4'>4</option>";
-				echo	"<option value='5'>5</option></select></div>";
-			}
-			?>
+				<div class='col-sm-8'>
+				<?php 
+				$blenders = array("Binastone", "Ninja", "Electrolux", "Philips");
+				foreach ($blenders as $value){
+					echo "<div class='item'>";
+					echo "<img src='$value.jpg' class='float-left'>";
+					echo	"<h3>$value Blender</h3>";
+					echo "<select name='$value'>";
+					echo	"<option value='0'>0</option>";
+					echo	"<option value='1'>1</option>";
+					echo	"<option value='2'>2</option>";
+					echo	"<option value='3'>3</option>";
+					echo	"<option value='4'>4</option>";
+					echo	"<option value='5'>5</option></select></div>";
+				}
+				?>
+					<div class='item'>
+						<button type="submit"></button>
+					</div>
+				</div>
 			</form>
 		</div>
 	</div>
