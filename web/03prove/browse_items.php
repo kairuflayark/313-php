@@ -16,8 +16,9 @@
 	<?php 
 		$_SESSION['blenders'] = array("Binastone", "Ninja", "Electrolux", "Philips");
 		foreach ($_SESSION['blenders'] as $value){
-			if (isset($_GET['$value'])){
-				$_SESSION['$value'] = true;
+			if (isset($_GET["$value"])){
+				$_SESSION["$value"] = true;
+
 			}
 		}
 	?>
