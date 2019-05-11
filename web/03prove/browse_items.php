@@ -13,6 +13,14 @@
 	<script type="text/javascript" src=script.js></script>
 </head>
 <body>
+	<?php 
+		$_SESSION['blenders'] = array("Binastone", "Ninja", "Electrolux", "Philips");
+		foreach ($_SESSION['blenders'] as $value){
+			if (isset($_GET['$value'])){
+				$_SESSION['$value'] = true;
+			}
+		}
+	?>
 	<div class="jumbotron text-center">
 		<h1> Blender Heaven </h1>
 	</div>
@@ -24,19 +32,20 @@
 			<form>
 				<div class='col-sm-6'>
 				<?php 
-				$blenders = array("Binastone", "Ninja", "Electrolux", "Philips");
-				//$_SESSION['Blenders'] = $blenders;
-				foreach ($blenders as $value){
+				
+				
+				foreach ($_SESSION['blenders'] as $value){
 					echo "<div class='item row'>";
 					echo "<div><img src='$value.jpg' class='img-fluid float-left'></div>";
 					echo	"<div><h3>$value Blender</h3>";
-					echo "<label>Quantity</label><select name='$value' id='$value' onchange= 'update_session_value(this.id, this.value)'>";
-					echo	"<option value='0'>0</option>";
-					echo	"<option value='1'>1</option>";
-					echo	"<option value='2'>2</option>";
-					echo	"<option value='3'>3</option>";
-					echo	"<option value='4'>4</option>";
-					echo	"<option value='5'>5</option></select></div></div>";
+					echo	"<button href='browse_items.php?$value=true>Add To Cart</button>"
+					//echo "<label>Quantity</label><select name='$value' id='$value' onchange= 'update_session_value(this.id, this.value)'>";
+					//echo	"<option value='0'>0</option>";
+					//echo	"<option value='1'>1</option>";
+					//echo	"<option value='2'>2</option>";
+					//echo	"<option value='3'>3</option>";
+					//echo	"<option value='4'>4</option>";
+					//echo	"<option value='5'>5</option></select></div></div>";
 				}
 				?>
 					<div class='item'>
