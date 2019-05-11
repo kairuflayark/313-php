@@ -18,11 +18,23 @@
 			<div class="col-sm-4">
 				<p>sidebar <br> Find your stuff here</p>
 			</div>
-			<div class="col-sm-8 item">
-				<img src="Binastone.jpg" class="float-left">
-				<h3>Binastone Blender</h3>
-				<p> Budget Blender for the Budget Masses.</p>
-			</div>
+			<form action="checkout.php" method="get">
+			<?php 
+			$blenders = array("Binastone", "Ninja", "Electrolux", "Philips");
+			foreach ($blenders as $value){
+				echo "<div class='col-sm-8 item'>";
+				echo "<img src='$value.jpg' class='float-left'>";
+				echo	"<h3>$value Blender</h3>";
+				echo "<select name='$value'>";
+				echo	"<option value='0'>0</option>";
+				echo	"<option value='1'>1</option>";
+				echo	"<option value='2'>2</option>";
+				echo	"<option value='3'>3</option>";
+				echo	"<option value='4'>4</option>";
+				echo	"<option value='5'>5</option></select></div>";
+			}
+			?>
+			</form>
 		</div>
 	</div>
 
