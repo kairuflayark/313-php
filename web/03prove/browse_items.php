@@ -38,7 +38,7 @@
 					echo "<div class='item row'>";
 					echo "<div><img src='$value.jpg' class='img-fluid float-left'></div>";
 					echo	"<div><h3>$value Blender</h3>";
-					echo	"<button href='browse_items.php?$value=true>Add To Cart</button>"
+					echo	"<button href='browse_items.php?$value=true>Add To Cart</button>";
 					//echo "<label>Quantity</label><select name='$value' id='$value' onchange= 'update_session_value(this.id, this.value)'>";
 					//echo	"<option value='0'>0</option>";
 					//echo	"<option value='1'>1</option>";
