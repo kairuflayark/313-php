@@ -23,17 +23,17 @@
 				<div class='col-sm-4'>
 					<form action="confirmation.php" method="post">
 					<label>First Name:</label>
-					<input type="text" name="fName">
+					<input type="text" name="fName"><br>
 					<label>Last Name:</label>
-					<input type="text" name='lName'>
+					<input type="text" name='lName'><br>
 					<label>Street Address:</label>
-					<input type="text" name='street'>
+					<input type="text" name='street'><br>
 					<label>City:</label>
-					<input type="text" name="city">
+					<input type="text" name="city"><br>
 					<label>State:</label>
-					<input type="text" name='state' maxlenght="2">
+					<input type="text" name='state' maxlength="2">
 					<label>Zip Code:</label>
-					<input type="text" name='zCode'>
+					<input type="text" name='zCode'><br>
 					<button type="submit">Finalize your Order</button>
 					<a href="view_cart.php"><button type="button">Return to Cart</button></a>
 					</form>
