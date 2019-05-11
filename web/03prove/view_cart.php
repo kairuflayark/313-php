@@ -50,7 +50,7 @@
 
 				<div class='item'>
 					<a  href="browse_items.php"><button type="button">Return to Shopping</button></a>
-					<a hred="checkout.php"><button type="button" >Continue to Checkout</button></a>
+					<a hred="checkout.php"><button type="button">Continue to Checkout</button></a>
 				</div>
 					
 			</div>
