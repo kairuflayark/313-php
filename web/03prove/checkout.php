@@ -35,7 +35,7 @@
 					<label>Zip Code:</label>
 					<input type="text" name='zCode'>
 					<button type="submit">Finalize your Order</button>
-					<a href="view_cart.php"><button>Return to Cart</button></a>
+					<a href="view_cart.php"><button type="button">Return to Cart</button></a>
 					</form>
 </body>
 </html>

@@ -49,7 +49,7 @@
 				}
 				?>
 					<div class='item'>
-						<a href="view_cart.php"><button>View Cart</button></a>
+						<a href="view_cart.php"><button type="button">View Cart</button></a>
 					</div>
 				</div>
 			</form>
