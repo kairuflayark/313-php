@@ -31,7 +31,7 @@ function test_input($data) {
 			<h2>Shipped To</h2>
 			<p>
 			<?php
-
+				print_r($_SESSION);
 				echo test_input($_GET["fName"]) . " " . test_input($_GET["lName"]) . "<br>";
 				echo test_input($_GET["street"]) . "<br>";
 				echo test_input($_GET["city"]) . ", " . test_input($_GET["state"]) . " " . test_input($_GET["zCode"]);

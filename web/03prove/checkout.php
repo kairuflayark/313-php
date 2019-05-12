@@ -23,7 +23,7 @@
 				<div class='col-sm-4'>
 					<form action="confirmation.php" method="post">
 						<label>First Name:</label>
-							<input type="text" name="fName"><br>
+							<input type="text" name="fName" onchange="function update_session_value(this.id, this.value)"><br>
 						<label>Last Name:</label>
 							<input type="text" name='lName'><br>
 						<label>Street Address:</label>
