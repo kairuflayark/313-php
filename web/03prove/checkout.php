@@ -34,7 +34,7 @@
 							<input type="text" name='state' maxlength="2"><br>
 						<label>Zip Code:</label>
 							<input type="text" name='zCode'><br>
-						<button type="submit" name="submit">Finalize your Order</button>
+						<button type="submit" name="submit" value = "true">Finalize your Order</button>
 					</form>
 					<a href="view_cart.php"><button type="button">Return to Cart</button></a>
 </body>
