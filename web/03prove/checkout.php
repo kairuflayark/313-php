@@ -26,16 +26,16 @@
 						<label>First Name:</label>
 							<input type="text" name="fName" onchange="update_session_value(this.name, this.value)"><br>
 						<label>Last Name:</label>
-							<input type="text" name='lName'><br>
+							<input type="text" name='lName' onchange="update_session_value(this.name, this.value)"><br>
 						<label>Street Address:</label>
-							<input type="text" name='street'><br>
+							<input type="text" name='street' onchange="update_session_value(this.name, this.value)"><br>
 						<label>City:</label>
-							<input type="text" name="city"><br>
+							<input type="text" name="city" onchange="update_session_value(this.name, this.value)"><br>
 						<label>State:</label>
-							<input type="text" name='state' maxlength="2"><br>
+							<input type="text" name='state' maxlength="2" onchange="update_session_value(this.name, this.value)"><br>
 						<label>Zip Code:</label>
-							<input type="text" name='zCode'><br>
-						<button type="submit" name="submit" value = "true">Finalize your Order</button>
+							<input type="text" name='zCode' onchange="update_session_value(this.name, this.value)"><br>
+						<button type="submit" name="submit" value = "true" onchange="update_session_value(this.name, this.value)">Finalize your Order</button>
 					</form>
 					<a href="view_cart.php"><button type="button">Return to Cart</button></a>
 </body>
