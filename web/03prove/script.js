@@ -1,6 +1,6 @@
-function update_session_value(value) {
+function update_session_value() {
 
-    var loadU = "session.php?=" + value;
+    var loadU = "session.php?=" + this.value;
 
     window.alert(loadU);
     var xhttp = new XMLHttpRequest();
