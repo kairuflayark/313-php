@@ -24,7 +24,7 @@
 				<div class='col-sm-4'>
 					<form action="confirmation.php" method="post">
 						<label>First Name:</label>
-							<input type="text" name="fName" onchange="update_session_value(this.id, this.value)"><br>
+							<input type="text" name="fName" onchange="update_session_value(this.name, this.value)"><br>
 						<label>Last Name:</label>
 							<input type="text" name='lName'><br>
 						<label>Street Address:</label>
