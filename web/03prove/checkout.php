@@ -35,7 +35,7 @@
 							<input type="text" name='state' maxlength="2" onchange="update_session_value(this.name, this.value)"><br>
 						<label>Zip Code:</label>
 							<input type="text" name='zCode' onchange="update_session_value(this.name, this.value)"><br>
-						<button type="submit" name="submit" value = "true" onchange="update_session_value(this.name, this.value)">Finalize your Order</button>
+						<a href="confirmation.php"><button type="button">Finalize your Order</button></a>
 					</form>
 					<a href="view_cart.php"><button type="button">Return to Cart</button></a>
 </body>
