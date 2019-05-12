@@ -14,6 +14,7 @@
 </head>
 <body>
 <?php 
+		print_r($_SESSION);
 		$_SESSION['blenders'] = array("Binastone", "Ninja", "Electrolux", "Philips");
 		foreach ($_SESSION['blenders'] as $value){
 			if (isset($_GET["$value"])){
