@@ -11,8 +11,8 @@ foreach ($_SESSION['Blenders'] as $value){
     }
 }
 foreach ($_SESSION['address'] as $value){
-    if (isset($_POST["$value"])){
-        $_SESSION["$value"] = $_POST["$value"];
+    if (isset($_GET["$value"])){
+        $_SESSION["$value"] = $_GET["$value"];
     }
 }
 ?>

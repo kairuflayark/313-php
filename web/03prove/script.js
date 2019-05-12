@@ -9,7 +9,7 @@ function update_session_value(id, value) {
             
         }
     }
-    xhttp.open("POST", loadU, true);
+    xhttp.open("GET", loadU, true);
     xhttp.send();
 
         
