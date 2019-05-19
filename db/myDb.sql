@@ -1,5 +1,5 @@
 CREATE TABLE star_system (
-    star_system_ID      INT,
+    star_system_ID      INT PRIMARY key,
     star_ID             INTEGER REFERENCES star(star_ID),
     affiliation_ID      text REFERENCES politics(affiliation_ID),
 );
@@ -23,7 +23,7 @@ CREATE TABLE asteroid_belt (
 );
 
 CREATE TABLE planet (
-    planet_id           INT,    
+    planet_id           INT PRIMARY KEY,
     planet_type         TEXT REFERENCES planet_type(planet_type_ID),
     planet_name         text,
     orbit_distance      BIGINT,
