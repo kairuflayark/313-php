@@ -42,7 +42,6 @@ CREATE TABLE planet (
 );
 
 CREATE TABLE moons (
-    moon_ID             INT PRIMARY KEY,
     planet_type         TEXT REFERENCES planet_type(planet_type_ID),
     planet_name         text,
     orbit_distance      BIGINT,
@@ -64,7 +63,8 @@ CREATE TABLE fleet(
     fleet_name          text,
     commanding_officer  TEXT,
     affiliation_ID      text REFERENCES politics(affiliation_ID),
-    ship_ID             int REFERENCES ships(ship_ID)
+    ship_ID             int REFERENCES ships(ship_ID),
+    current_location    int REFERENCES planet(planet_id)
 );
 
 CREATE TABLE ships(
