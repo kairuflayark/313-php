@@ -15,6 +15,7 @@
 	</div>
 	<?php include('nav_bar.php'); ?>
 	<h1> Coming Soon...</h1>
+	<a href="star_system/starship_list.php">Star System</a>
 
 </body>
 </html>
