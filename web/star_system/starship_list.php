@@ -35,6 +35,7 @@
           $affiliation = $fleet['affiliation'];
           echo $affiliation;
           $affiliation1 = $db->query("SELECT affiliation from politics where id=$affiliation");
+          echo "die";
           echo " : $affiliation1";
           $id = $fleet['id'];
           foreach ($db->query("SELECT * from ships where fleet=$id") as $ship) {
