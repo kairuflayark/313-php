@@ -33,6 +33,7 @@
         foreach ($db->query('SELECT * from fleet') as $fleet){
           echo $fleet['fleet_name'] . $fleet['commanding_officer'];
           $affiliation = $fleet['affiliation'];
+          echo $affiliation;
           $affiliation = $db->query("SELECT affiliation from politics where id=$affiliation");
           echo " : $affiliation";
           $id = $fleet['id'];
