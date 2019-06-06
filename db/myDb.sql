@@ -71,10 +71,15 @@ CREATE TABLE fleet(
     affiliation         int REFERENCES politics(id)
 );
 
+CREATE TABLE ship_type(
+    id                  serial primary key,
+    type                text
+);
+
 CREATE TABLE ships(
     id                  serial primary key,
-    ship_name           text,
-    ship_type           text,
+    name                text,
+    type                int REFERENCES ship_type(id),
     commanding_officer  text,
     fleet               int REFERENCES fleet(id),
     affiliation         int REFERENCES politics(id),
@@ -97,3 +102,22 @@ insert into location (star_system, orbit_star, orbit_planet) values (1, 1, 1);
 insert into planet_type (planet_type) values ('Ocean');
 insert into climate (climate) values ('normal');
 insert into planet (name, planet_type, location, orbit_distance, planet_radius, gravity, orbit_period, rotation, climate, resource_value, habitability, population, affiliation ) values ('Cordwan', 2, 2, 12345900, 6507, .95, 84.66, 36.2, 1, 0, 1, 3153932000, 1);
+insert into planet_type (planet_type) values ('Rock');
+insert into politics (affiliation) values ('Cordwan Orbital Authority');
+insert into location (star_system, orbit_star, orbit_planet) values (1, 1, 2);
+insert into planet (name, planet_type, location, orbit_distance, planet_radius, gravity, orbit_period, rotation, resource_value, habitability, population, affiliation) values ('Norman Moon''s', 3, 3, 19768, 745, .3, .18, 0, 0, 0, 763500, 2);
+
+
+
+insert into fleet (fleet_name, commanding_officer, affiliation) values ('COA First Fleet', 'Admiral Jason Rongabar', 2);
+insert into ship_type (type) values ('subCapital, Battlecruiser');
+insert into ships (name, type, commanding_officer, fleet, affiliation, current_location, ship_size, crew_size) values ('COAS Methorn Mountains', 1, 'Captain Alfred Savani', 1, 2, 3, 19000, 16000);
+insert into ships (name, type, commanding_officer, fleet, affiliation, current_location, ship_size, crew_size) values ('COAS Merskis Falls', 1, 'Captain Tule Sleet', 1, 2, 3, 17500, 13000);
+
+
+SELECT * from ships where fleet=1;
+
+select id from fleet;
+
+
+drop table fleet;
