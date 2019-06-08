@@ -34,9 +34,9 @@
           echo $fleet['fleet_name'] . $fleet['commanding_officer'];
           $affiliation = $fleet['affiliation'];
           echo $affiliation;
-          $affiliation1 = $db->query("SELECT affiliation from politics where id=$affiliation");
+          $affiliation = $db->query("SELECT affiliation from politics where id=$affiliation");
           echo "die";
-          echo " : $affiliation1";
+          echo " : $affiliation";
           $id = $fleet['id'];
           foreach ($db->query("SELECT * from ships where fleet=$id") as $ship) {
             echo "<br><br>" . $ship['name'] . " : ";
