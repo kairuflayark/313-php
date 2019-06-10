@@ -123,7 +123,7 @@ select * from fleet left join politics on politics.affiliation_id = fleet.affili
 
 select * from ships;
 
-select s.ship_name, t.type, f.fleet_name, a.affiliation, ss.system_name, star.star_name, p.planet_name, s.ship_size, s.crew_size from ships s
+select s.ship_name, t.type, f.fleet_name, a.affiliation, l.location_id, ss.system_name, star.star_name, p.planet_name, s.ship_size, s.crew_size from ships s
 left join ship_type t on s.ship_type_id=t.ship_type_id
 left join location l on s.location_id=l.location_id
 left join star_system ss on l.system_id=ss.system_id

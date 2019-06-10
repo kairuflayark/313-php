@@ -30,26 +30,15 @@
       die();
     }
 
-        foreach ($db->query('SELECT * from fleet') as $fleet){
-          echo $fleet['fleet_name'] . $fleet['commanding_officer'];
-          $affiliation = $fleet['affiliation'];
-          echo $affiliation;
-          $affiliation = $db->query("SELECT affiliation from politics where id=$affiliation");
-          echo "die";
-          echo " : $affiliation";
-          $id = $fleet['id'];
-          foreach ($db->query("SELECT * from ships where fleet=$id") as $ship) {
-            echo "<br><br>" . $ship['name'] . " : ";
-            $type = $ship['type'];
-            $type = $db->query("SELECT type from ship_type where id=$type");
-            echo "$type : ";
-            echo $ship['commanding_officer'];
-            $affiliation = $ship['affiliation'];
-            $affiliation = $db->query("SELECT affiliation from politics where id=$affiliation");
-            echo " : $affiliation";
-          }
-
-        }
+        foreach ($db->query("SELECT s.ship_name, t.type, f.fleet_name, a.affiliation, l.location_id, ss.system_name, star.star_name, p.planet_name, s.ship_size, s.crew_size from ships s
+                left join ship_type t on s.ship_type_id=t.ship_type_id
+                left join location l on s.location_id=l.location_id
+                left join star_system ss on l.system_id=ss.system_id
+                left join star on l.star_id=star.star_id
+                left join planet p on l.planet_id=p.planet_id
+                left join fleet f on s.fleet_id=f.fleet_id
+                left join politics a on s.affiliation_id = a.affiliation_id");
+        
 
 
   ?>
