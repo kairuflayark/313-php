@@ -39,7 +39,7 @@
                 left join fleet f on s.fleet_id=f.fleet_id
                 left join politics a on s.affiliation_id = a.affiliation_id") as $row){
                   
-                  echo $row["s.ship_name"];
+                  echo $row['ship_name'];
 
                 }
         
