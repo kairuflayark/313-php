@@ -29,7 +29,7 @@
       echo 'Error Connecting!' . $ex;
       die();
     }
-
+        $printout = array('ship_name', 'type', 'fleet_name', 'affiliation', 'system_name', 'planet_name', 'ship_size', 'crew_size');
         foreach ($db->query("SELECT s.ship_name, t.type, f.fleet_name, a.affiliation, l.location_id, ss.system_name, star.star_name, p.planet_name, s.ship_size, s.crew_size from ships s
                 left join ship_type t on s.ship_type_id=t.ship_type_id
                 left join location l on s.location_id=l.location_id
@@ -39,8 +39,12 @@
                 left join fleet f on s.fleet_id=f.fleet_id
                 left join politics a on s.affiliation_id = a.affiliation_id") as $row){
                   
-                  echo $row['ship_name'];
+                  foreach ($printout as $column){
 
+                  
+                    echo $row[$column] . "  ";
+                  }
+                  echo "<br>";
                 }
         
 
