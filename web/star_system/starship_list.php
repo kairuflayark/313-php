@@ -9,7 +9,7 @@
 <body>
     
   <?php
-    include connect.php;
+    include "connect.php";
         
         $all_ships = array();
         $ship_data = array();
