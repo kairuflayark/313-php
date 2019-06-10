@@ -26,7 +26,7 @@
                   foreach ($printout as $column){
 
                   
-                    $ship_data("$column => $row[$column]");
+                    $ship_data[$column] = $row[$column];
                   }
                   array_push($all_ships, $ship_data);
                 }
