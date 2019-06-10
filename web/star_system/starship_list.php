@@ -9,26 +9,10 @@
 <body>
     
   <?php
-  try{
-      $dbUrl = getenv('DATABASE_URL');
-
-      $dbOpts = parse_url($dbUrl);
-
-      $dbHost = $dbOpts["host"];
-      $dbPort = $dbOpts["port"];
-      $dbUser = $dbOpts["user"];
-      $dbPassword = $dbOpts["pass"];
-      $dbName = ltrim($dbOpts["path"],'/');
-
-      $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-
-      $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    }
-    catch (PDOException $ex)
-    {
-      echo 'Error Connecting!' . $ex;
-      die();
-    }
+    include connect.php;
+        
+        $all_ships = array();
+        $ship_data = array();
         $printout = array('ship_name', 'type', 'fleet_name', 'affiliation', 'system_name', 'planet_name', 'ship_size', 'crew_size');
         foreach ($db->query("SELECT s.ship_name, t.type, f.fleet_name, a.affiliation, l.location_id, ss.system_name, star.star_name, p.planet_name, s.ship_size, s.crew_size from ships s
                 left join ship_type t on s.ship_type_id=t.ship_type_id
@@ -38,15 +22,15 @@
                 left join planet p on l.planet_id=p.planet_id
                 left join fleet f on s.fleet_id=f.fleet_id
                 left join politics a on s.affiliation_id = a.affiliation_id") as $row){
-                  
+                
                   foreach ($printout as $column){
 
                   
-                    echo $row[$column] . "  ";
+                    $ship_data("$column => $row[$column]");
                   }
-                  echo "<br>";
+                  array_push($all_ships, $ship_data);
                 }
-        
+        print_r($all_ships);
 
 
   ?>
