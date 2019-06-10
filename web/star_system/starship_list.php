@@ -37,7 +37,11 @@
                 left join star on l.star_id=star.star_id
                 left join planet p on l.planet_id=p.planet_id
                 left join fleet f on s.fleet_id=f.fleet_id
-                left join politics a on s.affiliation_id = a.affiliation_id");
+                left join politics a on s.affiliation_id = a.affiliation_id") as $row){
+                  
+                  echo $row["s.ship_name"];
+
+                }
         
 
 
