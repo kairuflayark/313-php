@@ -8,6 +8,9 @@
 </head>
 
 <?php
+    include "connect.php";
+    
+
     $printout = array('ship_name', 'type', 'fleet_name', 'affiliation', 'system_name', 'planet_name', 'ship_size', 'crew_size');
     $fleetout = array('fleet_name', 'commanding_officer', 'affiliation');
     $fleet;
