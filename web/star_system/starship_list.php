@@ -13,6 +13,7 @@
     
     $all_ships = array();
     $ship_data = array();
+    
     $printout = array('ship_name', 'type', 'fleet_name', 'affiliation', 'system_name', 'planet_name', 'ship_size', 'crew_size');
     foreach ($db->query("SELECT s.ship_name, t.type, f.fleet_name, a.affiliation, l.location_id, ss.system_name, star.star_name, p.planet_name, s.ship_size, s.crew_size from ships s
       left join ship_type t on s.ship_type_id=t.ship_type_id

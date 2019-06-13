@@ -130,7 +130,8 @@ left join star_system ss on l.system_id=ss.system_id
 left join star on l.star_id=star.star_id
 left join planet p on l.planet_id=p.planet_id
 left join fleet f on s.fleet_id=f.fleet_id
-left join politics a on s.affiliation_id = a.affiliation_id;
+left join politics a on s.affiliation_id = a.affiliation_id
+where s.fleet_id=1;
 
 select * from planet;
 
