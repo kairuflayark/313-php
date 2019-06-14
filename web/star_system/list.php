@@ -33,10 +33,10 @@
                 foreach ($printout as $column){
                 echo '<td>' . $row[$column] . "</td>";
                 }
-        echo "<a href='update_ship.php?ship=" . $row['ship_id'] . "'><button>Update Data</button></a> ";
+        echo "<td><a href='update_ship.php?ship=" . $row['ship_id'] . "'><button>Update Data</button></a></td> ";
         echo "</tr>";
         }
-        echo "</table>";
+        echo "</table><br>";
     }
 
 ?>
