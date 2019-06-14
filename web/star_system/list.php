@@ -17,6 +17,9 @@
     foreach ($db->query("select * from fleet left join politics on politics.affiliation_id = fleet.affiliation_id") as $fleet) {
         echo $fleet['fleet_name'] . "<br>" . $fleet['commanding_officer']. '<br>'. $fleet['affiliation'] . '<br><br>';
         $current_fleet = $fleet['fleet_id'];
+
+        echo "<table><tr>";
+
         foreach ($db->query("SELECT s.ship_id, s.ship_name, t.type, f.fleet_name, a.affiliation, l.location_id, ss.system_name, star.star_name, p.planet_name, s.ship_size, s.crew_size from ships s
             left join ship_type t on s.ship_type_id=t.ship_type_id
             left join location l on s.location_id=l.location_id
@@ -28,12 +31,12 @@
             where s.fleet_id=$current_fleet") as $row){
       
                 foreach ($printout as $column){
-                echo $row[$column] . "  ";
+                echo '<td>' . $row[$column] . "</td>";
                 }
         echo "<a href='update_ship.php?ship=" . $row['ship_id'] . "'><button>Update Data</button></a> ";
-        echo "<br>";
+        echo "</tr>";
         }
-        echo "<br>";
+        echo "</table>";
     }
 
 ?>
