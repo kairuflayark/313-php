@@ -34,7 +34,7 @@
                 foreach ($printout as $column){
                     echo '<td>' . $row[$column] . "</td>";
                 }
-            echo "<td><a href='shipdata.php?show=" . $row['ship_id'] . "'><button>Update Data</button></a></td> ";
+            echo "<td><a href='shipdata.php?show=" . $row['ship_id'] . "'><button>Show Details</button></a></td> ";
             echo "<td><a href='shipdata.php?update=" . $row['ship_id'] . "'><button>Update Data</button></a></td> ";
             echo "</tr>";
         }

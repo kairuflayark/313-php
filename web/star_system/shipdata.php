@@ -9,7 +9,7 @@
 <body>
     
 <?php
-
+    include "connect.php";
 
     $printout = array('ship_name', 'type', 'commanding_officer', 'fleet_name', 'affiliation', 'system_name', 'planet_name', 'ship_size', 'crew_size');
     if (isset($_GET['show'])) {
