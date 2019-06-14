@@ -105,7 +105,10 @@ INSERT INTO location (system_id, star_id, planet_id) values (1,1,6);
 INSERT INTO ships (ship_name, ship_type_id, commanding_officer, fleet_id, affiliation_id, location_id, ship_size, crew_size) values ('Ragala''s Victory', 3, 'Captain Ri W''kine', 2, 3, 6, 30000, 50000);
 
 
-
+select l.location_id, ss.system_name, s.star_name, p.planet_name from location l 
+left join star_system ss on l.system_id = ss.system_id
+left join star s on l.star_id = s.star_id
+left join planet p on l.planet_id = p.planet_id;
 
 select * from planet;
 

@@ -30,11 +30,33 @@
                 foreach ($printout as $column){
                     echo '<td>' . $row[$column] . "</td>";
                 }
-            echo "<td><a href='shipdata.php?show=" . $row['ship_id'] . "'><button>Update Data</button></a></td> ";
             echo "<td><a href='shipdata.php?update=" . $row['ship_id'] . "'><button>Update Data</button></a></td> ";
             echo "</tr>";
         }
         echo "</table><br>";
+    }
+    else if (isset($_GET['update'])){
+        $ship = $_GET['update'];    
+        $orbit = array();
+        
+        foreach ($db->query('SELECT l.location_id, ss.system_name, s.star_name, p.planet_name from location l 
+            left join star_system ss on l.system_id = ss.system_id
+            left join star s on l.star_id = s.star_id
+            left join planet p on l.planet_id = p.planet_id') as $row){
+
+            if ($row['planet_name'] != "") {
+                $orbit[$row['location_id']] = $row['system_name'] . ", " . $row['planet_name'];
+            } elseif ($row['star_name'] != ""){
+                $orbit[$row['location_id']] =$row['system_name'] . ", " . $row['star_name'];
+            } else {
+                $orbit[$row['location_id']] =$row['system_name'];
+            }
+
+        }
+
+        print_r($orbit);
+    
+    
     }
 
 
