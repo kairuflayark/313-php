@@ -4,20 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ship List</title>
+    <title>Ship Data</title>
 </head>
-
-<?php
-    include "connect.php";
+<body>
     
+<?php
 
-    $printout = array('ship_name', 'commanding_officer', 'affiliation');
-    $fleetout = array('fleet_name', 'commanding_officer', 'affiliation');
-    $fleet;
-    foreach ($db->query("select * from fleet left join politics on politics.affiliation_id = fleet.affiliation_id") as $fleet) {
-        echo $fleet['fleet_name'] . "<br>" . $fleet['commanding_officer']. '<br>'. $fleet['affiliation'] . '<br><br>';
-        $current_fleet = $fleet['fleet_id'];
 
+    $printout = array('ship_name', 'type', 'commanding_officer', 'fleet_name', 'affiliation', 'system_name', 'planet_name', 'ship_size', 'crew_size');
+    if (isset($_GET['show'])) {
+        $ship = $_GET['show'];
         echo "<table><tr>";
 
         foreach ($db->query("SELECT s.ship_id, s.ship_name, t.type, s.commanding_officer, f.fleet_name, a.affiliation, l.location_id, ss.system_name, star.star_name, p.planet_name, s.ship_size, s.crew_size from ships s
@@ -28,7 +24,7 @@
             left join planet p on l.planet_id=p.planet_id
             left join fleet f on s.fleet_id=f.fleet_id
             left join politics a on s.affiliation_id = a.affiliation_id
-            where s.fleet_id=$current_fleet") as $row)
+            where s.ship_id=$ship") as $row)
         {
       
                 foreach ($printout as $column){
@@ -41,9 +37,7 @@
         echo "</table><br>";
     }
 
-?>
 
-<body>
-    
+?>
 </body>
 </html>
