@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="script.js"></script>
     <title>Ship Data</title>
 </head>
 <body>
@@ -48,17 +49,18 @@
     
             foreach ($printout as $column){
                 echo '<td>' . $row[$column] . "</td>";
-            }
-        echo "<td><a href='shipdata.php?update=" . $row['ship_id'] . "'><button>Update Data</button></a></td> ";
+            }  
         if (isset($_GET['update'])){
             echo "<td><select id='location'>";
             foreach ($orbit as $location){
                 echo "<option value='" . key($location) . "'>" . $location . "</option>";
             }
-            echo "</input>";
+
+            echo "</input></td";
+            echo "<td><a href='list.php'><input type='button' onClick='update_location($ship, getElementbyID('location').value)' >Update</input></a>";
         }
     }
-    
+
     echo "</td></tr></table>";
 
     print_r($orbit);
