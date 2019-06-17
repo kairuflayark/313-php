@@ -16,6 +16,7 @@
         $ship = $_GET['show'];
     }
     else if (isset($_GET['update'])){
+        $ship = $_GET['update'];
         $orbit = array();
         
         foreach ($db->query('SELECT l.location_id, ss.system_name, s.star_name, p.planet_name from location l 
@@ -49,12 +50,13 @@
                 echo '<td>' . $row[$column] . "</td>";
             }
         echo "<td><a href='shipdata.php?update=" . $row['ship_id'] . "'><button>Update Data</button></a></td> ";
-        echo "</tr>";
-        echo "<input type='select' id='location'>";
-        foreach ($orbit as $location){
-            echo "<option value='" . key($location) . "'>" . $location . "</option>";
+        if (isset($_GET['update'])){
+            echo "<input type='select' id='location'>";
+            foreach ($orbit as $location){
+                echo "<option value='" . key($location) . "'>" . $location . "</option>";
+            }
+            echo "</input>";
         }
-        echo "</input>";
     }
     echo "</table>";
 
