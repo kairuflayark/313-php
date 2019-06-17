@@ -51,14 +51,15 @@
             }
         echo "<td><a href='shipdata.php?update=" . $row['ship_id'] . "'><button>Update Data</button></a></td> ";
         if (isset($_GET['update'])){
-            echo "<input type='select' id='location'>";
+            echo "<td><select id='location'>";
             foreach ($orbit as $location){
                 echo "<option value='" . key($location) . "'>" . $location . "</option>";
             }
             echo "</input>";
         }
     }
-    echo "</table>";
+    
+    echo "</td></tr></table>";
 
     print_r($orbit);
 
