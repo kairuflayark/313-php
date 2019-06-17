@@ -57,7 +57,7 @@
             }
 
             echo "</input></td";
-            echo "<td><a href='list.php'><button onClick='update_location($ship, getElementbyID('location').value)' >Update</button></a>";
+            echo "<td><a href='list.php'><button onClick='update_location($ship)' >Update</button></a>";
         }
     }
 
@@ -70,5 +70,6 @@
 
 
 ?>
+
 </body>
 </html>
