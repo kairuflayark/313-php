@@ -57,7 +57,7 @@
             }
 
             echo "</input></td>";
-            echo "<td><a href='list.php'><button onClick='update_location($ship)' >Update</button></a>";
+            echo "<td><a href=''><button onClick='update_location($ship)' >Update</button></a>";
         }
     }
 
