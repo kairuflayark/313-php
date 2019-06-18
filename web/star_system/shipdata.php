@@ -57,7 +57,7 @@
             }
 
             echo "</input></td>";
-            echo "<td><button onClick='update_location($ship)' >Update</button>";
+            echo "<td><input type='button' name='Update' onClick='update_location($ship)' >Update</input>";
         }
     }
 
