@@ -56,7 +56,7 @@
                 echo "<option value='" . key($location) . "'>" . $location . "</option>";
             }
 
-            echo "</input></td";
+            echo "</input></td>";
             echo "<td><a href='list.php'><button onClick='update_location($ship)' >Update</button></a>";
         }
     }
