@@ -2,7 +2,7 @@ function update_location (ship)
 {
     var location = document.getElementById('location').value
     var loadU = 'update.php?ship=' + ship + '&location=' + location;
-    window.alert(loadu);
+    console.log(loadu);
     /*
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
