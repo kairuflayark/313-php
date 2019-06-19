@@ -8,6 +8,7 @@
 </head>
     <form action="">
         <?php
+        include "connect.php";
         $printout = array('ship_name', 'type', 'commanding_officer', 'ship_size', 'crew_size');
         foreach ($printout as $row){
             echo "<label>$row: </label><input type='text' name='$row'><br>";
