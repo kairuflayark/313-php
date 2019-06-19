@@ -1,6 +1,6 @@
 <?php
     include "connect.php";
-    print "runfirst";
+    print_r($_POST);
     if (isset($_POST['ship_id']))
     {   
         print "runSecond";
