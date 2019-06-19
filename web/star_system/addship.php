@@ -28,6 +28,13 @@
                 $orbit[$row['location_id']] =$row['system_name'];
             }
         } 
+        echo "<td><select id='location'>";
+        foreach ($orbit as $key => $location){
+            echo "<option value='$key'>" . $location . "</option>";
+        }
+
+        echo "</input></td>";
+
         $affiliation = array();
         foreach ($db->query('SELECT * from affiliation') as $row){
             $orbit[$row['affiliation_id']] = $row['affiliation'];
