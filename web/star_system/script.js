@@ -10,7 +10,7 @@ function update_location (ship, location)
             console.log(this.responseText);
         }
     };
-    xmlhttp.open("POST", loadU, true);
+    xmlhttp.open("GET", loadU, true);
     xmlhttp.send();
 
 }
