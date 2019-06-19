@@ -33,10 +33,7 @@
         foreach ($orbit as $key => $location){
             echo "<option value='$key'>" . $location . "</option>";
         }
-
-        echo "</input></td>";
-
-        
+        echo "</select>";
         $fleets = array();
         foreach ($db->query("SELECT * from politics") as $row){
             $fleets[$row['fleet_id']] = $row['fleet_name'];
@@ -45,7 +42,7 @@
         foreach ($fleets as $key => $fleet){
             echo "<option value='$key'>" . $fleet . "</option>";
         }
-        echo "</input></td>";
+        echo "</select>";
 
         $affiliation = array();
         foreach ($db->query("SELECT * from politics") as $row){
@@ -55,7 +52,7 @@
         foreach ($affiliation as $key => $politics){
             echo "<option value='$key'>" . $politics . "</option>";
         }
-        echo "</input></td>";
+        echo "</select>";
         print_r($affiliation);
 
         ?>
