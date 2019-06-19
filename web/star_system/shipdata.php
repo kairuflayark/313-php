@@ -8,7 +8,8 @@
     <title>Ship Data</title>
 </head>
 <body>
-    
+    <table>
+    </table>
 <?php
     include "connect.php";
 
@@ -34,7 +35,7 @@
             }
         } 
     } 
-    echo "<table><tr>";
+    echo "<tr>";
 
     foreach ($db->query("SELECT s.ship_id, s.ship_name, t.type, s.commanding_officer, f.fleet_name, a.affiliation, l.location_id, ss.system_name, star.star_name, p.planet_name, s.ship_size, s.crew_size from ships s
         left join ship_type t on s.ship_type_id=t.ship_type_id
@@ -57,7 +58,7 @@
             }
 
             echo "</input></td>";
-            echo "<td><button onclick='update_location($ship)'>Update</button>";
+            echo "<td><button onclick='update_location($ship, document.getElementById('location').value)'>Update</button>";
         }
     }
 

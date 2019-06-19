@@ -1,6 +1,6 @@
-function update_location (ship)
+function update_location (ship, location)
 {
-    var location = document.getElementById('location').value;
+  
     var loadU = 'update.php?ship=' + ship + '&location=' + location;
     console.log(loadU);
     
