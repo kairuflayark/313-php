@@ -35,7 +35,7 @@
         }
         echo "</select>";
         $fleets = array();
-        foreach ($db->query("SELECT * from politics") as $row){
+        foreach ($db->query("SELECT * from fleet") as $row){
             $fleets[$row['fleet_id']] = $row['fleet_name'];
         }
         echo "<td><select id='fleet_name'>";
@@ -53,7 +53,6 @@
             echo "<option value='$key'>" . $politics . "</option>";
         }
         echo "</select>";
-        print_r($affiliation);
 
         ?>
 
