@@ -36,13 +36,24 @@
 
         echo "</input></td>";
 
+        
+        $fleets = array();
+        foreach ($db->query("SELECT * from politics") as $row){
+            $fleets[$row['fleet_id']] = $row['fleet_name'];
+        }
+        echo "<td><select id='fleet_name'>";
+        foreach ($fleets as $key => $fleet){
+            echo "<option value='$key'>" . $fleet . "</option>";
+        }
+
+
         $affiliation = array();
         foreach ($db->query("SELECT * from politics") as $row){
-            $orbit[$row['affiliation_id']] = $row['affiliation'];
+            $affiliation[$row['affiliation_id']] = $row['affiliation'];
         }
         echo "<td><select id='politics'>";
-        foreach ($orbit as $key => $affiliation){
-            echo "<option value='$key'>" . $affiliation . "</option>";
+        foreach ($affiliation as $key => $politics){
+            echo "<option value='$key'>" . $politics . "</option>";
         }
         print_r($affiliation);
 
