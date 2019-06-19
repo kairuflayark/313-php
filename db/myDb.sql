@@ -140,5 +140,7 @@ UPDATE ships SET location_id = 4  where ship_id = 2;
 
 select * from planet;
 
+
+
 DROP SCHEMA public CASCADE;
 CREATE SCHEMA public;

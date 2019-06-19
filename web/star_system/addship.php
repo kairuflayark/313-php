@@ -37,10 +37,13 @@
         echo "</input></td>";
 
         $affiliation = array();
-        foreach ($db->query('SELECT * from affiliation') as $row){
+        foreach ($db->query("SELECT * from politics") as $row){
             $orbit[$row['affiliation_id']] = $row['affiliation'];
         }
-
+        echo "<td><select id='politics'>";
+        foreach ($orbit as $key => $affiliation){
+            echo "<option value='$key'>" . $affiliation . "</option>";
+        }
         print_r($affiliation);
 
         ?>
