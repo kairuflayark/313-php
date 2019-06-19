@@ -64,8 +64,8 @@
             }  
         if (isset($_GET['update'])){
             echo "<td><select id='location'>";
-            foreach ($orbit as $location){
-                echo "<option value='" . key($location) . "'>" . $location . "</option>";
+            foreach ($orbit as $key => $location){
+                echo "<option value='$key'>" . $location . "</option>";
             }
 
             echo "</input></td>";
