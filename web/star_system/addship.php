@@ -45,7 +45,7 @@
         foreach ($fleets as $key => $fleet){
             echo "<option value='$key'>" . $fleet . "</option>";
         }
-
+        echo "</input></td>";
 
         $affiliation = array();
         foreach ($db->query("SELECT * from politics") as $row){
@@ -55,6 +55,7 @@
         foreach ($affiliation as $key => $politics){
             echo "<option value='$key'>" . $politics . "</option>";
         }
+        echo "</input></td>";
         print_r($affiliation);
 
         ?>
