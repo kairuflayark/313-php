@@ -78,8 +78,6 @@
      <td><button onclick="update_location(<?php echo $ship; ?>, document.getElementById('location').value)">Update</button>
     </td></tr></table>
 
-    <?php print_r($orbit); ?> 
-
     
 
 

@@ -8,7 +8,6 @@
 
         $db->query("UPDATE ships SET location_id = $location where ship_id = $ship");
 
-        header('Location: list.php');
     }
 
 

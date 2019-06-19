@@ -136,6 +136,8 @@ left join fleet f on s.fleet_id=f.fleet_id
 left join politics a on s.affiliation_id = a.affiliation_id
 where s.fleet_id=1;
 
+UPDATE ships SET location_id = 4  where ship_id = 2;
+
 select * from planet;
 
 DROP SCHEMA public CASCADE;
