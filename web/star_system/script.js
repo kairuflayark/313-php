@@ -1,7 +1,7 @@
 function update_location (ship, location)
 {
   
-    var loadU = 'ship_id=' + ship + '&location_id=' + location;
+    var loadU = '?ship_id=' + ship + '&location_id=' + location;
     console.log(loadU);
     
     var xmlhttp = new XMLHttpRequest();
@@ -10,8 +10,7 @@ function update_location (ship, location)
             console.log(this.responseText);
         }
     };
-    xmlhttp.open("POST", 'update.php', true);
-    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-url-encoded");
-    xmlhttp.send(loadU);
+    xmlhttp.open("POST", 'update.php' + loadU, true);
+    xmlhttp.send();
 
 }
