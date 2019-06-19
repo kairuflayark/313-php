@@ -9,7 +9,17 @@
 </head>
 <body>
     <table>
-    </table>
+        <tr>
+        <td>Ship Name</td>
+        <td>Class</td>
+        <td>Commanding Officer</td>
+        <td>Assigned Fleet</td>'
+        <td>Political Affiliation</td>
+        <td>Location</td>
+        <td>Ship Size</td>
+        <td>Crew Size</td>
+        <td>New Location</td>
+        </tr>
 <?php
     include "connect.php";
 
