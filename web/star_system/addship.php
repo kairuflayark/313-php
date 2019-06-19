@@ -12,7 +12,7 @@
         foreach ($printout as $row){
             echo "<label>$row: </label><input type='text' name='$row'><br>";
         }
-        /*
+
         $orbit = array();
         
         foreach ($db->query('SELECT l.location_id, ss.system_name, s.star_name, p.planet_name from location l 
@@ -35,7 +35,6 @@
 
         print_r($affiliation);
 
-*/
         ?>
 
 
