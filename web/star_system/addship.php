@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Add ship</title>
 </head>
     <form action="update.php" method='POST' id="data">
     <table>
@@ -14,8 +14,7 @@
         <td>Commanding Officer</td>
         <td>Assigned Fleet</td>
         <td>Political Affiliation</td>
-        <td>System</td>
-        <td>Orbit</td>
+        <td>Location</td>
         <td>Ship Size</td>
         <td>Crew Size</td>
         </tr>
@@ -83,7 +82,9 @@
         ?>
         <td><input type="text" name="ship_size" id="ship_size"> </td>
         <td><input type="text" name="crew_size" id="crew_size"> </td>
-        </tr></table>
+        </tr>
+        <button onclick="add_ship()">Add Ship</button>
+        </table>
         
 
     </form>

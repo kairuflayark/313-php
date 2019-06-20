@@ -15,3 +15,12 @@ function update_location (ship, location)
 
 }
 
+function add_ship(params) {
+    var loadU = 'update.php?';
+    var elem = document.getElementById('data').elements;
+    info += elem[0].name + '=' + elem[0].value;
+    for (var i = 1; i <elem.length; i++){
+        loadU += "&" + elem[i].name + "=" + elem[i].value;
+    }
+    console.log(loadU);
+}
