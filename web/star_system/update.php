@@ -25,18 +25,18 @@
         $queryline = 'INSERT INTO ships (';
         foreach ($printout as $column){
             if ($end != $column){
-                $queryline . $column . ", ";
+                $queryline .= $column . ", ";
             }
             else {
-                $queryline . $colum . ") VALUES (";
+                $queryline .= $colum . ") VALUES (";
             }
         }
         foreach ($printout as $column){
             if ($end != $column){
-                $queryline . test_input($_GET[$column]) . ", ";
+                $queryline .= test_input($_GET[$column]) . ", ";
             }
             else {
-                $queryline . test_input($_GET[$column]) . ")" ;
+                $queryline .= test_input($_GET[$column]) . ")" ;
             }
         }
 
