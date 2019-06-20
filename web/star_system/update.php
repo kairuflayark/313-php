@@ -10,6 +10,6 @@
         $db->query("UPDATE ships SET location_id = $location where ship_id = $ship");
         print $ship . $location;
     }
-
+    else 
 
     ?>

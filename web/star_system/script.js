@@ -14,3 +14,4 @@ function update_location (ship, location)
     xmlhttp.send();
 
 }
+
