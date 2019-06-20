@@ -40,7 +40,7 @@
         }
         echo "</table><br><br><br>";
 
-        echo "<a href='add_ship.php><button>Add Ship</button></a>";
+        echo "<a href='add_ship.php'><button>Add Ship</button></a>";
     }
 
 ?>
