@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Add ship</title>
 </head>
-    <form action="update.php" method='POST' id="data">
+    <form id="data">
     <table>
         <tr>
         <td>Ship Name</td>
@@ -83,9 +83,9 @@
         <td><input type="text" name="ship_size" id="ship_size"> </td>
         <td><input type="text" name="crew_size" id="crew_size"> </td>
         </tr>
-        <button onclick="add_ship()">Add Ship</button>
-        </table>
         
+        </table>
+        <button onclick="add_ship()">Add Ship</button>
 
     </form>
 <body>
