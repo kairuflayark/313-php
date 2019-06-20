@@ -20,7 +20,7 @@
         <td>Crew Size</td>
         </tr>
         <tr>
-        </td><input type="text" name="ship_name" id="ship_name"> </td>
+        <td><input type="text" name="ship_name" id="ship_name"> </td>
 
 
         <?php
@@ -36,7 +36,7 @@
         echo "</select></td>";
         ?>
 
-        </td><input type="text" name="commanding_officer" id="commanding_officer"> </td>
+        <td><input type="text" name="commanding_officer" id="commanding_officer"> </td>
 
         <?php
             $fleets = array();
@@ -47,7 +47,7 @@
             foreach ($fleets as $key => $fleet){
                 echo "<option value='$key'>" . $fleet . "</option>";
             }
-            echo "</select>";
+            echo "</select></td>";
 
             $affiliation = array();
             foreach ($db->query("SELECT * from politics") as $row){
@@ -57,7 +57,7 @@
             foreach ($affiliation as $key => $politics){
                 echo "<option value='$key'>" . $politics . "</option>";
             }
-            echo "</select>";
+            echo "</select></td>";
 
             $orbit = array();
             
@@ -78,11 +78,12 @@
             foreach ($orbit as $key => $location){
                 echo "<option value='$key'>" . $location . "</option>";
             }
-            echo "</select>";
+            echo "</select></td>";
         
         ?>
-        </td><input type="text" name="ship_size" id="ship_size"> </td>
-        </td><input type="text" name="crew_size" id="crew_size"> </td>
+        <td><input type="text" name="ship_size" id="ship_size"> </td>
+        <td><input type="text" name="crew_size" id="crew_size"> </td>
+        </tr></table>
         
 
     </form>
