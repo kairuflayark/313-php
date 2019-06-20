@@ -35,7 +35,7 @@ function add_ship(params) {
 }
 
 function delete_ship(ship) {
-    var loadU = 'update.php?ship_id=' + ship + '&location_id=' + location;
+    var loadU = 'update.php?delete=' + ship;
     console.log(loadU);
     
     var xmlhttp = new XMLHttpRequest();
