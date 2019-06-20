@@ -43,7 +43,7 @@
             foreach ($db->query("SELECT * from fleet") as $row){
                 $fleets[$row['fleet_id']] = $row['fleet_name'];
             }
-            echo "<td><select id='fleet_name'>";
+            echo "<td><select name='fleet_name'>";
             foreach ($fleets as $key => $fleet){
                 echo "<option value='$key'>" . $fleet . "</option>";
             }
@@ -53,7 +53,7 @@
             foreach ($db->query("SELECT * from politics") as $row){
                 $affiliation[$row['affiliation_id']] = $row['affiliation'];
             }
-            echo "<td><select id='politics'>";
+            echo "<td><select name='politics'>";
             foreach ($affiliation as $key => $politics){
                 echo "<option value='$key'>" . $politics . "</option>";
             }
@@ -74,7 +74,7 @@
                     $orbit[$row['location_id']] =$row['system_name'];
                 }
             } 
-            echo "<td><select id='location'>";
+            echo "<td><select name='location'>";
             foreach ($orbit as $key => $location){
                 echo "<option value='$key'>" . $location . "</option>";
             }
