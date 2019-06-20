@@ -27,6 +27,7 @@ function add_ship(params) {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
+            console.log(this.response);
             console.log(this.responseText);
         }
     };
