@@ -86,9 +86,8 @@
         </tr>
         
         </table>
-        <button onclick="add_ship()">Add Ship</button>
-
     </form>
+    <button onclick="add_ship()">Add Ship</button>
 <body>
     
 </body>
