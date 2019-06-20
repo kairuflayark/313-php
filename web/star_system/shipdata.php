@@ -72,12 +72,16 @@
            
         
         }
+
+        
+    }
+    if (isset($_GET['update'])){
+    echo "<td><button onclick=update_location($ship, document.getElementById(''location'').value)'>Update</button></td>";
+    echo "<td><button onclick='delete_ship($ship)'>Delete Ship</button></td></tr></table>";
     }
 
 ?>
-     <td><button onclick="update_location(<?php echo $ship; ?>, document.getElementById('location').value)">Update</button></td>
-     <td><button onclick="delete_ship(<?php echo $ship; ?>)">Delete Ship</button></td></tr></table>
-
+    
     
 
 
