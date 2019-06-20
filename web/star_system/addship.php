@@ -27,7 +27,7 @@
         include "connect.php";
         $types = array();
         foreach ($db->query("SELECT * from ship_type") as $row){
-            $types[$row['ship_type_id']] = $row['ship_type'];
+            $types[$row['ship_type_id']] = $row['type'];
         }
         echo "<td><select id='ship_type_id'>";
         foreach ($types as $key => $type){
