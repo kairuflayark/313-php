@@ -75,8 +75,8 @@
     }
 
 ?>
-     <td><button onclick="update_location(<?php echo $ship; ?>, document.getElementById('location').value)">Update</button>
-    </td></tr></table>
+     <td><button onclick="update_location(<?php echo $ship; ?>, document.getElementById('location').value)">Update</button></td>
+     <td><button onclick="delete_ship(<?php echo $ship; ?>)">Delete Ship</button></td></tr></table>
 
     
 

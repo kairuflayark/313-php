@@ -140,7 +140,7 @@ UPDATE ships SET location_id = 4  where ship_id = 2;
 
 select * from planet;
 
-INSERT INTO ships (ship_name, ship_type_id, commanding_officer, fleet_id, affiliation_id, location_id, ship_size, ) VALUES (Menthorn Mountains, 2, Captain Slonger, 1, 1, 3, 15000, 14000)
+INSERT INTO ships (ship_name, ship_type_id, commanding_officer, fleet_id, affiliation_id, location_id, ship_size, crew_size) VALUES ('Menthorn Mountains', 2, 'Captain Slonger', 1, 1, 3, 15000, 14000);
 
 DROP SCHEMA public CASCADE;
 CREATE SCHEMA public;
