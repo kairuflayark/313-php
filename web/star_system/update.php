@@ -41,7 +41,7 @@
         }
 
         print $queryline;
-
+        $db->query($queryline);
 
     }
 
