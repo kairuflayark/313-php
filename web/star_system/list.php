@@ -44,7 +44,7 @@
     }
 ?>
 
-<br><br><a href='add_ship.php'><button>Add Ship</button></a>
+<br><br><a href='addship.php'><button>Add Ship</button></a>
     
 </body>
 </html>
