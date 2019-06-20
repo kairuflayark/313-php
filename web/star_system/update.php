@@ -36,16 +36,9 @@
         }
         foreach ($printout as $column){
             if ($end != $column){
-                if (is_string($_GET[$column]){
-                    $stringed = test_input($_GET[$column]);
-                    $queryline .= "''$stringed'', ";
-                } 
-                else {
                 $queryline .= test_input($_GET[$column]) . ", ";
                 }
-                
-            }
-            else {
+            else{
                 $queryline .= test_input($_GET[$column]) . ")" ;
             }
         }
