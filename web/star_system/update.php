@@ -18,9 +18,6 @@
         $db->query("UPDATE ships SET location_id = $location where ship_id = $ship");
         print $ship . $location;
     }
-    else if (isset($_GET['delete'])){
-
-    }
     else {
         $printout = array('ship_name', 'ship_type_id', 'commanding_officer', 'fleet_id', 'affiliation_id', 'location_id', 'ship_size', 'crew_size');
         $list = array();
@@ -37,8 +34,8 @@
         foreach ($printout as $column){
             if ($end != $column){
                 $queryline .= test_input($_GET[$column]) . ", ";
-                }
-            else{
+            }
+            else {
                 $queryline .= test_input($_GET[$column]) . ")" ;
             }
         }
