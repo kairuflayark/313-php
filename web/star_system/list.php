@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ship List</title>
 </head>
-
+<body>
 <?php
     include "connect.php";
     
@@ -38,14 +38,13 @@
             echo "<td><a href='shipdata.php?update=" . $row['ship_id'] . "'><button>Update Data</button></a></td> ";
             echo "</tr>";
         }
-        echo "</table><br><br><br>";
+        echo "</table><br>";
 
-        echo "<a href='add_ship.php'><button>Add Ship</button></a>";
+       
     }
-
 ?>
 
-<body>
+<br><br><a href='add_ship.php'><button>Add Ship</button></a>
     
 </body>
 </html>
