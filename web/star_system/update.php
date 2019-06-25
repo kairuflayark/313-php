@@ -43,8 +43,8 @@
                 $queryline .="'". test_input($_GET[$column]) . "'" . ")";
             }
         }
-        $queryline = str_replace($queryline, "%", " ");
-        print $queryline;
+        $querylines = str_replace($queryline, "%", " ");
+        print $querylines;
 
     }
 
