@@ -45,7 +45,7 @@
         }
         $queryline = str_replace($queryline, "%", " ");
         print $queryline;
-        $db->query($queryline);
+
     }
 
     ?>
