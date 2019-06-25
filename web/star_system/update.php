@@ -43,9 +43,9 @@
                 $queryline .="'". test_input($_GET[$column]) . "'" . ")";
             }
         }
-        $querylines = str_replace($queryline, "%", " ");
-        print $querylines;
-
+        $queryline = str_replace("%", " ", $queryline);
+        print $queryline;
+        $db->query($queryline);
     }
-
+    header("Location: list.php");
     ?>
