@@ -36,7 +36,7 @@
                 $queryline .= "'". test_input($_GET[$column]) . "'" . ", ";
             }
             else {
-                $queryline .="'". test_input($_GET[$column]) . "'" . " ";
+                $queryline .="'". test_input($_GET[$column]) . "'" . ")";
             }
         }
 
