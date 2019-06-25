@@ -33,7 +33,7 @@
         }
         foreach ($printout as $column){
             if (is_string($_GET[$column])){
-                $queryline .= "'". test_input($_GET[$column]) "'" . ", ";
+                $queryline .= "'". test_input($_GET[$column]) . "'" . ", ";
             }
 
             if ($end != $column){
