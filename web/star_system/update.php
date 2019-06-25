@@ -32,20 +32,16 @@
             }
         }
         foreach ($printout as $column){
-            if (is_string($_GET[$column])){
+            if ($end != $column){
                 $queryline .= "'". test_input($_GET[$column]) . "'" . ", ";
             }
-
-            elseif ($end != $column){
-                $queryline .= test_input($_GET[$column]) . ", ";
-            }
             else {
-                $queryline .= test_input($_GET[$column]) . ")" ;
+                $queryline .="'". test_input($_GET[$column]) . "'" . " ";
             }
         }
 
         print $queryline;
-        
+        $db->query($queryline);
     }
 
     ?>
