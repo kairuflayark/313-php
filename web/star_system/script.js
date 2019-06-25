@@ -23,7 +23,7 @@ function add_ship(params) {
         loadU += "&" + elem[i].name + "=" + elem[i].value;
     }
     console.log(loadU);
-    loadU = loadU.split(' ').join('%');
+    loadU = loadU.replace(" ", "+");
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
