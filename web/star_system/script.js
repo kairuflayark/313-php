@@ -8,11 +8,11 @@ function update_location (ship)
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             console.log(this.responseText);
+            window.location = 'list.php';
         }
     };
     xmlhttp.open("GET", loadU, true);
     xmlhttp.send();
-    window.location = 'list.php';
 }
 
 function add_ship(params) {
@@ -30,12 +30,12 @@ function add_ship(params) {
         if (this.readyState == 4 && this.status == 200) {
             console.log(this.response);
             console.log(this.responseText);
+            window.location = 'list.php';
         }
     };
     xmlhttp.open("GET", loadU, true);
     xmlhttp.send();
 
-    window.location = 'list.php';
 }
 
 function delete_ship(ship) {
@@ -46,10 +46,11 @@ function delete_ship(ship) {
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             console.log(this.responseText);
+            window.location = 'list.php';
         }
     };
     xmlhttp.open("GET", loadU, true);
     xmlhttp.send();
 
-    window.location = 'list.php';
+
 }
