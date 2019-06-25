@@ -47,5 +47,4 @@
         print $queryline;
         $db->query($queryline);
     }
-    header("Location: list.php");
     ?>

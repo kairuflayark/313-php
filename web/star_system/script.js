@@ -12,7 +12,7 @@ function update_location (ship)
     };
     xmlhttp.open("GET", loadU, true);
     xmlhttp.send();
-
+    window.location = 'list.php';
 }
 
 function add_ship(params) {
@@ -34,6 +34,8 @@ function add_ship(params) {
     };
     xmlhttp.open("GET", loadU, true);
     xmlhttp.send();
+
+    window.location = 'list.php';
 }
 
 function delete_ship(ship) {
@@ -48,4 +50,6 @@ function delete_ship(ship) {
     };
     xmlhttp.open("GET", loadU, true);
     xmlhttp.send();
+
+    window.location = 'list.php';
 }
