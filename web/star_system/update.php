@@ -18,6 +18,10 @@
         $db->query("UPDATE ships SET location_id = $location where ship_id = $ship");
         print $ship . $location;
     }
+    elseif (isset($_GET['delete'])){
+        $ship = $_GET['delete'];
+        $db->query("DELETE from ships where ship_id = $ship");
+    }
     else {
         $printout = array('ship_name', 'ship_type_id', 'commanding_officer', 'fleet_id', 'affiliation_id', 'location_id', 'ship_size', 'crew_size');
         $list = array();
@@ -39,7 +43,7 @@
                 $queryline .="'". test_input($_GET[$column]) . "'" . ")";
             }
         }
-
+        $queryline = str_replace($queryline, "%", " ");
         print $queryline;
         $db->query($queryline);
     }
