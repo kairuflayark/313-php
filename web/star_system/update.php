@@ -36,7 +36,7 @@
                 $queryline .= "'". test_input($_GET[$column]) . "'" . ", ";
             }
 
-            if ($end != $column){
+            elseif ($end != $column){
                 $queryline .= test_input($_GET[$column]) . ", ";
             }
             else {
