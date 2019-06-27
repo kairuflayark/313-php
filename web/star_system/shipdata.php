@@ -20,19 +20,19 @@
         <td>Orbit</td>
         <td>Ship Size</td>
         <td>Crew Size</td>
-        <td>New Location</td>
-        </tr>
+      
 <?php
     include "connect.php";
 
     $printout = array('ship_name', 'type', 'commanding_officer', 'fleet_name', 'affiliation', 'system_name', 'planet_name', 'ship_size', 'crew_size');
     if (isset($_GET['show'])) {
         $ship = $_GET['show'];
+        echo "</tr>";
     }
     else if (isset($_GET['update'])){
         $ship = $_GET['update'];
         $orbit = array();
-        
+        echo '<td>New Location</td></tr>';
         foreach ($db->query('SELECT l.location_id, ss.system_name, s.star_name, p.planet_name from location l 
             left join star_system ss on l.system_id = ss.system_id
             left join star s on l.star_id = s.star_id
