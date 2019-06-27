@@ -66,6 +66,13 @@ CREATE TABLE ships(
     parasite_craft      text
 );
 
+CREATE TABLE users (
+    user_id             serial,
+    username            text UNIQUE,
+    password_hash       text,
+    permissions         VARCHAR(1)
+);
+
 
 
 ALTER TABLE location ADD star_id   int REFERENCES star(star_id);
