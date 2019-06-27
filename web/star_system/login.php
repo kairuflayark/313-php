@@ -16,7 +16,7 @@
         $username = $_POST['username'];
         $password = $_POST['password'];        
         require('connect.php');
-        foreach ($db->query("SELECT password_hash, permissions from users where username= $username") as $fromDB){
+        foreach ($db->query("SELECT password_hash, permissions from users where username= '$username'") as $fromDB){
 
             if (password_verify($password, $fromDB['password_hash'])){
                 $_SESSION['username'] = $username;
@@ -39,7 +39,7 @@
     <input type="text" name="username" id="username">
     <br>
     <label for="password">Password:</label>
-    <input type="text" name="password" id="password">
+    <input type="password" name="password" id="password">
     <input type="submit" value="Log in">
     </Form>
 </body>
