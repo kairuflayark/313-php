@@ -12,9 +12,10 @@
     echo "Inspecting Credentials";
     if (isset($_POST['username']) && isset($_POST['password']))
     {
+        
         $username = $_POST['username'];
         $password = $_POST['password'];        
-        
+        require('connect.php');
         foreach ($db->query("SELECT password_hash, permissions from users where username= $username") as $fromDB){
 
             if (password_verify($password, $fromDB['password_hash'])){
