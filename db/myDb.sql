@@ -66,6 +66,8 @@ CREATE TABLE ships(
     parasite_craft      text
 );
 
+
+
 ALTER TABLE location ADD star_id   int REFERENCES star(star_id);
 ALTER TABLE location ADD planet_id int REFERENCES planet(planet_id);
 
@@ -144,3 +146,11 @@ INSERT INTO ships (ship_name, ship_type_id, commanding_officer, fleet_id, affili
 
 DROP SCHEMA public CASCADE;
 CREATE SCHEMA public;
+
+
+CREATE TABLE users (
+    user_id             serial,
+    username            text UNIQUE,
+    password_hash       text,
+    permissions         VARCHAR(1)
+);
