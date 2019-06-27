@@ -78,7 +78,7 @@
     }
     if (isset($_GET['update'])){
     echo "<td><button onclick='update_location($ship)'>Update</button></td>";
-    if ($_SESSION['permissions'] == 'c'){
+    if ($_SESSION['permission'] == 'c'){
         echo "<td><button onclick='delete_ship($ship)'>Delete Ship</button></td></tr></table>";
     }
     }
