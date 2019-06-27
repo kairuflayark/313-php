@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,7 +45,12 @@
     }
 ?>
 
-<br><br><a href='addship.php'><button>Add Ship</button></a>
+<br><br>
+    <?php 
+        if ($_SESSION['permission'] == 'c'){
+          echo "<a href='addship.php'><button>Add Ship</button></a>";
+        }
+        ?>
     
 </body>
 </html>

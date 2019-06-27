@@ -26,10 +26,9 @@
             }
         }
     }
-    else
-    {
+
         echo "<br> ERROR!";
-    }
+
 
     ?>
 

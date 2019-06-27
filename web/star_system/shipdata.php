@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,7 +78,9 @@
     }
     if (isset($_GET['update'])){
     echo "<td><button onclick='update_location($ship)'>Update</button></td>";
-    echo "<td><button onclick='delete_ship($ship)'>Delete Ship</button></td></tr></table>";
+    if ($_SESSION['permissions'] == 'c'){
+        echo "<td><button onclick='delete_ship($ship)'>Delete Ship</button></td></tr></table>";
+    }
     }
 
 ?>
