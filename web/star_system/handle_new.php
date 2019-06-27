@@ -21,7 +21,7 @@
 
 
     require('connect.php');
-    $query = "INSERT INTO users (username, password, permissions) values ('$username', '$hashedPassword', '$permissions')";
+    $query = "INSERT INTO users (username, password, permissions) values ($username, $hashedPassword, $permissions)";
     echo $query;
     
     $db->query($query);
