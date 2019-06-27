@@ -154,3 +154,5 @@ CREATE TABLE users (
     password_hash       text,
     permissions         VARCHAR(1)
 );
+
+select * from users;

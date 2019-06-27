@@ -15,13 +15,13 @@
     <input type="text" name="username" id="username">
     <br>
     <label for="password">Password:</label>
-    <input type="submit" value="Create">
+    <input type="text" name="password">
     <label for=""></label>
     <select name="permissions">
         <option value="c">Create & Delete</option>
         <option value="u">Update</option>
         </select>
-    <input type="submit" value="1">
+    <input type="submit" value="Submit">
     </form>
 
 
