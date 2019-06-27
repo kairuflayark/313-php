@@ -39,7 +39,9 @@
     <br>
     <label for="password">Password:</label>
     <input type="password" name="password" id="password">
+    <br>
     <input type="submit" value="Log in">
+    <a href="create_account.php"><button>Request Access</button></a>
     </Form>
 </body>
 </html>
